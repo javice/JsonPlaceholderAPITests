@@ -1,0 +1,26 @@
+plugins {
+    id 'java'
+}
+
+group = 'org.example'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.11.4'
+    // https://mvnrepository.com/artifact/com.intuit.karate/karate-junit5
+    testImplementation 'com.intuit.karate:karate-junit5:1.4.1'
+    // https://mvnrepository.com/artifact/com.intuit.karate/karate-apache
+    testImplementation 'com.intuit.karate:karate-apache:0.9.6'
+    // https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.11.4'
+
+}
+
+test {
+    useJUnitPlatform()
+}
