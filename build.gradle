@@ -67,8 +67,8 @@ publishing {
             name = "GitHubPackages"
             url = uri("https://maven.pkg.github.com/javice/JsonPlaceholderAPITests")
             credentials {
-                username = 'x-access-token'
-                password = System.getenv("GITHUB_TOKEN")
+                username = System.getenv("GITHUB_ACTOR")
+                password = System.getenv("ENV_SECRET")
             }
         }
     }
