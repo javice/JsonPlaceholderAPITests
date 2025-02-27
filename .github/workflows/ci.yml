@@ -50,6 +50,7 @@ jobs:
     needs: build
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
+    environment: Entorno
 
 
     steps:
@@ -75,6 +76,8 @@ jobs:
           GITHUB_ACTOR: ${{ github.actor }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           REPO_SECRET: ${{ secrets.REPO_SECRET }}
+          ENV_SECRET: ${{ secrets.ENV_SECRET }}
+
 
 #      - name: Publish package
 #        uses: gradle/gradle-build-action@v3
